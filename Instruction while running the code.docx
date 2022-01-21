@@ -1,0 +1,9 @@
+# Real-time-data-storing-in-google-drive
+Storing the real time data to the personal google drive account.
+
+Note: while running the code, you must the save the settings.yml file , client_secrets.json (renaming the downloaded json file) in the same folder.
+And you must change the code as per your sensor connections(Here I am using ultrasonic sensor with Raspbeery_pi board.)
+google folder id where you want to store : To find the id open the folder in the google drive where you want to store after opening you will find the path of the folder in the google search bar as 
+https://drive.google.com/drive/folders/1T_dwqjhKSazj_3m-yIthSeZgmbjbG2KQ
+The black part of the above url is your folder id
+ 
