@@ -41,7 +41,6 @@ def distance():
     distance = (TimeElapsed * 34300) / 2
     return distance
 
-
 if __name__ == '__main__':
     while True:
         try:
@@ -59,18 +58,17 @@ if __name__ == '__main__':
                 #cop = str(name)
                  #{1:3}%".format (adcout, percent)
                 reporttime = (time.strftime("%H:%M:%S"))
-                csvresult = open("/home/pi/python_projects/Ultrosonic_data22.csv","a")
+                csvresult = open("paste the path of the folder where code was saved/Ultrosonic_data22.csv","a")
                 #csvresult.write(dis + ","+ closer +" , " + reporttime + "\n")
                 csvresult.write(dis + ","+ reporttime + "\n")
                 csvresult.close
                 # # Upload files to your Google Drive
                 upload_file_list = ["Ultrosonic_data22.csv"]
                 for upload_file in upload_file_list:
-                    gfile = drive.CreateFile({'parents': [{'id': '1T_dwqjhKSazj_3m-yIthSeZgmgx7G2KQ'}]})
+                    gfile = drive.CreateFile({'parents': [{'id': 'google folder id where you want to store'}]})
                     # Read file and set it as a content of this instance.
                     gfile.SetContentFile(upload_file)
                     gfile.Upload() # Upload the file.
         except KeyboardInterrupt:
             print("Measurement stopped by User")
             GPIO.cleanup()
-
